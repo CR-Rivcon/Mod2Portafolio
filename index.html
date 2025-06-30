@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristopher Rivera - Portafolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: #0f172a;
+            color: #fff;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #a3e635, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #a3e635 0%, #22d3ee 100%);
+            color: #0f172a;
+            font-weight: 600;
+            border: none;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(90deg, #bef264 0%, #67e8f9 100%);
+            color: #0f172a;
+        }
+        .btn-outline-custom {
+            border: 2px solid #a3e635;
+            color: #a3e635;
+            background: transparent;
+        }
+        .btn-outline-custom:hover {
+            background: #a3e635;
+            color: #0f172a;
+        }
+        .badge-featured {
+            background: rgba(163, 230, 53, 0.2);
+            color: #a3e635;
+            font-weight: 600;
+        }
+        .tech-badge-cyan {
+            background: rgba(34, 211, 238, 0.2);
+            color: #22d3ee;
+            border: 1px solid #22d3ee;
+        }
+        .tech-badge-lime {
+            background: rgba(163, 230, 53, 0.2);
+            color: #a3e635;
+            border: 1px solid #a3e635;
+        }
+        .skill-badge-lime {
+            background: rgba(163, 230, 53, 0.2);
+            color: #a3e635;
+            border: 1px solid #a3e635;
+        }
+        .skill-badge-cyan {
+            background: rgba(34, 211, 238, 0.2);
+            color: #22d3ee;
+            border: 1px solid #22d3ee;
+        }
+        .custom-navbar {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid #1e293b;
+            backdrop-filter: blur(8px);
+        }
+        .profile-image {
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #a3e635 0%, #22d3ee 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+        }
+        .profile-initials {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #a3e635 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .project-card, .skill-card, .competency-card, .contact-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid #334155;
+            border-radius: 1rem;
+            transition: border-color 0.2s;
+        }
+        .project-card:hover, .skill-card:hover, .contact-card:hover {
+            border-color: #a3e635;
+        }
+        .contact-card {
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .contact-card:hover {
+            transform: scale(1.04);
+            border-color: #22d3ee;
+        }
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .footer {
+            background: #1e293b;
+            border-top: 1px solid #334155;
+        }
+        .text-lime { color: #a3e635 !important; }
+        .text-cyan { color: #22d3ee !important; }
+        .bg-lime { background: #a3e635 !important; }
+        .bg-cyan { background: #22d3ee !important; }
+        .border-lime { border-color: #a3e635 !important; }
+        .border-cyan { border-color: #22d3ee !important; }
+        .custom-input {
+            background: rgba(30, 41, 59, 0.7);
+            color: #fff;
+            border: 1px solid #334155;
+        }
+        .custom-input:focus {
+            border-color: #a3e635;
+            box-shadow: 0 0 0 0.2rem rgba(163, 230, 53, 0.25);
+        }
+        .bg-glass {
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand gradient-text fw-bold" href="#inicio">CR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="profile-container mb-4">
+                        <div class="profile-image">
+                            <span class="profile-initials">CR</span>
+                        </div>
+                    </div>
+                    <h1 class="hero-title mb-4">
+                        <span class="gradient-text">Cristopher Andres</span><br>
+                        Rivera Concha
+                    </h1>
+                    <p class="hero-description mb-5">
+                        Me apasiona la música, la automatización con microcontroladores, ver películas y usar la
+                        <span class="text-lime">tecnología para solucionar problemas</span> y mejorar procesos. Mi
+                        motivación es crear herramientas que faciliten el trabajo diario y contribuyan al crecimiento de las
+                        organizaciones.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-gradient me-3" id="btnProyectos">Ver Proyectos</button>
+                        <button class="btn btn-outline-custom" id="btnCV">Descargar CV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="projects-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">
+                        <span class="gradient-text">Proyectos</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Featured Project -->
+                <div class="col-lg-8">
+                    <div class="card project-card featured-project h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-database-fill text-lime me-2 fs-4"></i>
+                                <span class="badge badge-featured">Destacado</span>
+                            </div>
+                            <h5 class="card-title text-white">Sistema de Ingreso de Personal</h5>
+                            <p class="card-text text-white mb-3">
+                                Interfaz web completa para gestionar el proceso de ingreso de nuevos empleados
+                            </p>
+                            <p class="card-text text-white">
+                                Una solución integral que permite registrar nuevos ingresos, hacer seguimiento de documentos,
+                                gestionar etapas del proceso y enviar notificaciones automáticas por correo.
+                            </p>
+                            <div class="tech-badges mb-4">
+                                <span class="badge tech-badge-cyan">HTML5</span>
+                                <span class="badge tech-badge-cyan">CSS3</span>
+                                <span class="badge tech-badge-cyan">JavaScript</span>
+                                <span class="badge tech-badge-cyan">Bootstrap</span>
+                                <span class="badge tech-badge-cyan">jQuery</span>
+                            </div>
+                            <div class="project-buttons">
+                                <button class="btn btn-sm btn-outline-lime me-2">
+                                    <i class="bi bi-github me-1"></i>Código
+                                </button>
+                                <button class="btn btn-sm btn-outline-cyan">
+                                    <i class="bi bi-box-arrow-up-right me-1"></i>Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Projects -->
+                <div class="col-lg-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <i class="bi bi-lightning-fill text-cyan fs-4 mb-3"></i>
+                            <h6 class="card-title text-white">Automatización con Microcontroladores</h6>
+                            <p class="card-text text-white small mb-3">
+                                Proyectos de automatización usando Arduino y sensores
+                            </p>
+                            <div class="tech-badges mb-3">
+                                <span class="badge tech-badge-lime small">Arduino</span>
+                                <span class="badge tech-badge-lime small">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <i class="bi bi-globe text-lime fs-4 mb-3"></i>
+                            <h6 class="card-title text-white">Herramientas Web Responsivas</h6>
+                            <p class="card-text text-white small mb-3">
+                                Aplicaciones web responsivas para optimizar flujos de trabajo
+                            </p>
+                            <div class="tech-badges mb-3">
+                                <span class="badge tech-badge-cyan small">HTML5</span>
+                                <span class="badge tech-badge-cyan small">CSS3</span>
+                                <span class="badge tech-badge-cyan small">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <i class="bi bi-code-slash text-cyan fs-4 mb-3"></i>
+                            <h6 class="card-title text-white">Interactividad con jQuery</h6>
+                            <p class="card-text text-white small mb-3">
+                                Elementos dinámicos y manipulación del DOM
+                            </p>
+                            <div class="tech-badges mb-3">
+                                <span class="badge tech-badge-lime small">jQuery</span>
+                                <span class="badge tech-badge-lime small">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="skills-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">
+                        <span class="gradient-text">Habilidades Técnicas</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card skill-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-lime">Stack JavaScript</h5>
+                            <p class="card-text text-white">Tecnologías del curso dominadas</p>
+                            <div class="skill-badges">
+                                <span class="badge skill-badge-lime">HTML5</span>
+                                <span class="badge skill-badge-lime">CSS3</span>
+                                <span class="badge skill-badge-lime">JavaScript</span>
+                                <span class="badge skill-badge-lime">Bootstrap</span>
+                                <span class="badge skill-badge-lime">jQuery</span>
+                                <span class="badge skill-badge-lime">GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card skill-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-cyan">Tecnologías Complementarias</h5>
+                            <p class="card-text text-white">Herramientas adicionales en desarrollo</p>
+                            <div class="skill-badges">
+                                <span class="badge skill-badge-cyan">Arduino</span>
+                                <span class="badge skill-badge-cyan">Microcontroladores</span>
+                                <span class="badge skill-badge-cyan">Automatización</span>
+                                <span class="badge skill-badge-cyan">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-white">Competencias Técnicas Desarrolladas</h4>
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="competency-card text-center">
+                                <i class="bi bi-file-earmark-code text-lime"></i>
+                                <h6 class="text-lime">Estructuración HTML5</h6>
+                                <p class="small text-white">Semántica correcta y accesibilidad web</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="competency-card text-center">
+                                <i class="bi bi-palette text-cyan"></i>
+                                <h6 class="text-cyan">Diseño Responsivo</h6>
+                                <p class="small text-white">CSS3 y Bootstrap para múltiples dispositivos</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="competency-card text-center">
+                                <i class="bi bi-gear text-lime"></i>
+                                <h6 class="text-lime">Interactividad</h6>
+                                <p class="small text-white">JavaScript y jQuery para experiencias dinámicas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">
+                        <span class="gradient-text">Contacto</span>
+                    </h2>
+                    <p class="lead text-white">
+                        ¿Interesado en colaborar o conocer más sobre mi trabajo? ¡Me encantaría conectar contigo!
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a href="https://linkedin.com" target="_blank" class="contact-card text-center text-decoration-none d-block h-100">
+                        <i class="bi bi-linkedin contact-icon text-lime"></i>
+                        <h5 class="text-lime">LinkedIn</h5>
+                        <p class="text-white">Conectemos profesionalmente</p>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="https://github.com" target="_blank" class="contact-card text-center text-decoration-none d-block h-100">
+                        <i class="bi bi-github contact-icon text-cyan"></i>
+                        <h5 class="text-cyan">GitHub</h5>
+                        <p class="text-white">Explora mis proyectos</p>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="mailto:cristopher@email.com" class="contact-card text-center text-decoration-none d-block h-100">
+                        <i class="bi bi-envelope contact-icon text-lime"></i>
+                        <h5 class="text-lime">Email</h5>
+                        <p class="text-white">Conversemos directamente</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-container">
+                        <h4 class="text-center mb-4 gradient-text">¿Tienes un proyecto en mente?</h4>
+                        <p class="text-center text-white mb-4">
+                            Estoy siempre abierto a nuevas oportunidades y colaboraciones interesantes.
+                        </p>
+                        <form id="contactForm" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control custom-input" id="nombre" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control custom-input" id="email" placeholder="Tu email" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control custom-input" id="asunto" placeholder="Asunto" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control custom-input" id="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-gradient" id="btnEnviar">
+                                        Enviar Mensaje
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="formMessage" class="mt-3 text-center d-none"></div>
+                        <script>
+                        $(function() {
+                            $('#contactForm').on('submit', function(e) {
+                                e.preventDefault();
+                                $('#formMessage').removeClass('d-none').removeClass('text-danger').addClass('text-success').text('¡Mensaje enviado correctamente!');
+                                this.reset();
+                            });
+                        });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-white mb-0">
+                        © 2024 Cristopher Andres Rivera Concha. 
+                        <span class="text-lime">Stack JavaScript</span> - Portafolio Académico
+                    </p>
+                    <p class="text-white small mt-2">
+                        Desarrollado con HTML5, CSS3, Bootstrap, JavaScript y jQuery
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
